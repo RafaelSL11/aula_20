@@ -1,0 +1,37 @@
+def soma ():
+    n1 = float(input_entry.get())
+    n2 =  float(input_entry2.get())
+    resultado1 =  n1 + n2
+    resultado['text'] = f' Resultado da soma =  {resultado1}'
+
+
+
+root = tk.Tk()
+root.geometry('300x300')
+
+label1 =  tk.Label(root, text='Calculadora de Soma', fg='red', bg='white', font='Arial', width='50')
+label1.pack()
+
+#espaço do 1º número
+label_n1 = tk.Label(root, text = 'Digite o número 1')
+label_n1.pack()
+input_entry =  tk.Entry(root, width=10)
+input_entry.pack(padx=50, pady=10)
+
+#espaço do 2º número
+label_n1 = tk.Label(root, text = 'Digite o número 2')
+label_n1.pack()
+input_entry2 =  tk.Entry(root, width=10)
+input_entry2.pack(padx=50, pady=10)
+
+
+#botão de soma
+btn = tk.Button(root, text='+', fg='red', bg='white', width= 5, height=2, command=soma)
+btn.pack(pady=20)
+
+#resultado aparece aqui
+resultado =  tk.Label(root, text= ' ', font='Arial', bg='yellow', fg = 'black')
+resultado.pack()
+
+
+root.mainloop()
